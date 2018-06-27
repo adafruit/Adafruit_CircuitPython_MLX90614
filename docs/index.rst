@@ -23,14 +23,14 @@ Table of Contents
 .. toctree::
     :caption: Tutorials
 
-.. todo:: Add any Learn guide links here. If there are none, then simply delete this todo and leave
-    the toctree above for use later.
+    https://github.com/adafruit/Adafruit_Learning_System_Guides/tree/master/DIY_Thermal_Light_Painting
 
 .. toctree::
     :caption: Related Products
 
-.. todo:: Add any product links here. If there are none, then simply delete this todo and leave
-    the toctree above for use later.
+    https://www.adafruit.com/product/1747
+    https://www.adafruit.com/product/1748
+
 
 .. toctree::
     :caption: Other Links
