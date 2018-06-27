@@ -36,8 +36,8 @@ Implementation Notes
 **Hardware:**
 
 * Sensors:
-  https://www.adafruit.com/products/1748
-  https://www.adafruit.com/products/1749
+  https://www.adafruit.com/product/1747
+  https://www.adafruit.com/product/1748
 
 * Datasheet:
   https://cdn-shop.adafruit.com/datasheets/MLX90614.pdf
