@@ -36,8 +36,8 @@ Implementation Notes
 **Hardware:**
 
 * Sensors:
-  https://www.adafruit.com/products/1748
-  https://www.adafruit.com/products/1749
+  https://www.adafruit.com/product/1747
+  https://www.adafruit.com/product/1748
 
 * Datasheet:
   https://cdn-shop.adafruit.com/datasheets/MLX90614.pdf
@@ -96,34 +96,34 @@ class MLX90614:
 
     def __init__(self, i2c_bus, address=_MLX90614_I2CADDR):
         self._device = i2c_device.I2CDevice(i2c_bus, address)
-        self.buf = bytearray(2) 
+        self.buf = bytearray(2)
         self.buf[0] = _MLX90614_CONFIG
 
     @property
     def read_ambient_temp_f(self):
-        """Ambient Temperature in fahrenheit.""" 
-        return ( ( self._read_temp(_MLX90614_TA) * 9/5 ) + 32)
+        """Ambient Temperature in fahrenheit."""
+        return (self._read_temp(_MLX90614_TA) * 9/5) + 32
 
     @property
     def read_object_temp_f(self):
-        """Object Temperature in fahrenheit.""" 
-        return ( ( self._read_temp(_MLX90614_TOBJ1) * 9/5 ) + 32)
+        """Object Temperature in fahrenheit."""
+        return (self._read_temp(_MLX90614_TOBJ1) * 9/5) + 32
 
     @property
     def read_ambient_temp_c(self):
-        """Ambient Temperature in celsius.""" 
-        return ( self._read_temp(_MLX90614_TA) )
+        """Ambient Temperature in celsius."""
+        return self._read_temp(_MLX90614_TA)
 
     @property
     def read_object_temp_c(self):
-        """Object Temperature in celsius.""" 
-        return ( self._read_temp(_MLX90614_TOBJ1) )
+        """Object Temperature in celsius."""
+        return self._read_temp(_MLX90614_TOBJ1)
 
     def _read_temp(self, register):
         temp = self._read_16(register)
         temp *= 0.02
         temp -= 273.15
-        return (temp)
+        return temp
 
     def _read_16(self, register):
         # Read and return a 16-bit unsigned big endian value read from the
@@ -132,4 +132,4 @@ class MLX90614:
             self.buf[0] = register
             self._device.write(self.buf, end=1, stop=False)
             self._device.readinto(self.buf)
-            return ( self.buf[1] << 8 | self.buf[0] )
+            return self.buf[1] << 8 | self.buf[0]
