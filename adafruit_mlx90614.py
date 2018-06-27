@@ -98,22 +98,22 @@ class MLX90614:
         self.buf[0] = _MLX90614_CONFIG
 
     @property
-    def read_ambient_temp_f(self):
+    def ambient_temp_f(self):
         """Ambient Temperature in fahrenheit."""
         return (self._read_temp(_MLX90614_TA) * 9/5) + 32
 
     @property
-    def read_object_temp_f(self):
+    def object_temp_f(self):
         """Object Temperature in fahrenheit."""
         return (self._read_temp(_MLX90614_TOBJ1) * 9/5) + 32
 
     @property
-    def read_ambient_temp_c(self):
+    def ambient_temp_c(self):
         """Ambient Temperature in celsius."""
         return self._read_temp(_MLX90614_TA)
 
     @property
-    def read_object_temp_c(self):
+    def object_temp_c(self):
         """Object Temperature in celsius."""
         return self._read_temp(_MLX90614_TOBJ1)
 
