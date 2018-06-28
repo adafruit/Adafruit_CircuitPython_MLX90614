@@ -21,4 +21,4 @@ mlx = adafruit_mlx90614.MLX90614(i2c)
 
 # temperature results in celsius
 print("Ambent Temp: ", mlx.ambient_temperature)
-print("Object Temp: ", mlx.object_temp_temperature)
+print("Object Temp: ", mlx.object_temperature)
