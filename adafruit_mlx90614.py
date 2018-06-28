@@ -99,7 +99,7 @@ class MLX90614:
     """
 
     def __init__(self, i2c_bus, address=_MLX90614_I2CADDR):
-    self._device = i2c_device.I2CDevice(i2c_bus, address)
+        self._device = i2c_device.I2CDevice(i2c_bus, address)
         self.buf = bytearray(2)
         self.buf[0] = _MLX90614_CONFIG
 
