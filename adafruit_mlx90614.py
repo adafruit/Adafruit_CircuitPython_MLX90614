@@ -93,27 +93,17 @@ class MLX90614:
     """
 
     def __init__(self, i2c_bus, address=_MLX90614_I2CADDR):
-        self._device = i2c_device.I2CDevice(i2c_bus, address)
+    self._device = i2c_device.I2CDevice(i2c_bus, address)
         self.buf = bytearray(2)
         self.buf[0] = _MLX90614_CONFIG
 
     @property
-    def ambient_temp_f(self):
-        """Ambient Temperature in fahrenheit."""
-        return (self._read_temp(_MLX90614_TA) * 9/5) + 32
-
-    @property
-    def object_temp_f(self):
-        """Object Temperature in fahrenheit."""
-        return (self._read_temp(_MLX90614_TOBJ1) * 9/5) + 32
-
-    @property
-    def ambient_temp_c(self):
+    def ambient_temperature(self):
         """Ambient Temperature in celsius."""
         return self._read_temp(_MLX90614_TA)
 
     @property
-    def object_temp_c(self):
+    def object_temperature(self):
         """Object Temperature in celsius."""
         return self._read_temp(_MLX90614_TOBJ1)
 
