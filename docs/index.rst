@@ -28,14 +28,13 @@ Table of Contents
 .. toctree::
     :caption: Related Products
 
-    https://www.adafruit.com/product/1747
-    https://www.adafruit.com/product/1748
-
+    Adafruit `Melexis Contact-less Infrared Sensor - MLX90614 3V <https://www.adafruit.com/product/1747>
+    Adafruit `Melexis Contact-less Infrared Sensor - MLX90614 5V <https://www.adafruit.com/product/1748>
 
 .. toctree::
     :caption: Other Links
 
-    Download <https://github.com/mikeysklar/adafruit_CircuitPython_mlx90614/releases/latest>
+    Download <https://github.com/adafruit/adafruit_CircuitPython_MLX90614/releases/latest>
     CircuitPython Reference Documentation <https://circuitpython.readthedocs.io>
     CircuitPython Support Forum <https://forums.adafruit.com/viewforum.php?f=60>
     Discord Chat <https://adafru.it/discord>
