@@ -19,5 +19,6 @@ import adafruit_mlx90614
 i2c = io.I2C(board.SCL, board.SDA, frequency=100000)
 mlx = adafruit_mlx90614.MLX90614(i2c)
 
-print("Ambent Temp: ", mlx.ambient_temp_f)
-print("Object Temp: ", mlx.object_temp_f)
+# temperature results in celsius
+print("Ambent Temp: ", mlx.ambient_temperature)
+print("Object Temp: ", mlx.object_temp_temperature)
