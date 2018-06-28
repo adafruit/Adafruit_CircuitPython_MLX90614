@@ -35,6 +35,12 @@ Implementation Notes
 
 **Hardware:**
 
+* Adafruit `Melexis Contact-less Infrared Sensor - MLX90614 3V
+  <https://www.adafruit.com/product/1747>`_ (Product ID: 1747)
+
+* Adafruit `Melexis Contact-less Infrared Sensor - MLX90614 5V
+  <https://www.adafruit.com/product/1748>`_ (Product ID: 1748)
+
 * Sensors:
   https://www.adafruit.com/product/1747
   https://www.adafruit.com/product/1748
@@ -56,7 +62,7 @@ import adafruit_bus_device.i2c_device as i2c_device
 # imports
 
 __version__ = "0.0.0-auto.0"
-__repo__ = "https://github.com/mikeysklar/Adafruit_CircuitPython_mlx90614.git"
+__repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_mlx90614.git"
 
 # Internal constants:
 _MLX90614_I2CADDR = const(0x5A)
