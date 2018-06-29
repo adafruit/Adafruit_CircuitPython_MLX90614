@@ -94,9 +94,8 @@ class MLX90614:
     - frequency=100000 - this sensor does not respond to the default 400000 i2c bus speed
 
     Optionally you can specify:
-    - address: The I2C address of the sensor.  If not specified the sensor's
-               default value will be assumed.
-    """
+    - address: The I2C address of the sensor.
+    If not specified the sensor's default value will be assumed."""
 
     def __init__(self, i2c_bus, address=_MLX90614_I2CADDR):
         self._device = i2c_device.I2CDevice(i2c_bus, address)
