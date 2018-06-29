@@ -9,8 +9,8 @@ Introduction
     :target: https://discord.gg/nBQh6qu
     :alt: Discord
 
-.. image:: https://travis-ci.org/adafruit/adafruit_CircuitPython_MLX90614.svg?branch=master
-    :target: https://travis-ci.org/adafruit/adafruit_CircuitPython_MLX90614
+.. image:: https://travis-ci.org/adafruit/Adafruit_CircuitPython_MLX90614.svg?branch=master
+    :target: https://travis-ci.org/adafruit/Adafruit_CircuitPython_MLX90614
     :alt: Build Status
 
 CircuitPython module for the Melexis MLX90614 Contact-less Infrared Temperature sensor.  See
