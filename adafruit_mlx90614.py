@@ -121,8 +121,7 @@ class MLX90614:
     def _read_16(self, register):
         # Read and return a 16-bit unsigned big endian value read from the
         # specified 16-bit register address.
-        with self._device:
+        with self._device as i2c:
             self.buf[0] = register
-            self._device.write(self.buf, end=1, stop=False)
-            self._device.readinto(self.buf)
+            i2c.write_then_readinto(self.buf, self.buf, out_end=1)
             return self.buf[1] << 8 | self.buf[0]
