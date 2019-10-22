@@ -16,7 +16,6 @@ Introduction
 CircuitPython module for the Melexis MLX90614 Contact-less Infrared Temperature sensor.  See
 examples/mlx90614_simpletest.py for a demo of the usage.
 
-
 Dependencies
 =============
 This driver depends on:
@@ -28,12 +27,7 @@ Please ensure all dependencies are available on the CircuitPython filesystem.
 This is easily achieved by downloading
 `the Adafruit library and driver bundle <https://github.com/adafruit/Adafruit_CircuitPython_Bundle>`_.
 
-Usage Example
-=============
-
-See examples/mlx90614_simpletest.py for a demo of the usage.
-
-nstalling from PyPI
+Installing from PyPI
 ====================
 
 On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally `from
@@ -57,6 +51,11 @@ To install in a virtual environment in your current project:
     python3 -m venv .env
     source .env/bin/activate
     pip3 install adafruit-circuitpython-mlx90614
+
+Usage Example
+=============
+
+See examples/mlx90614_simpletest.py for a demo of the usage.
 
 Contributing
 ============
