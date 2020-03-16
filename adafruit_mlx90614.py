@@ -87,6 +87,7 @@ _MLX90614_ID2 = const(0x3D)
 _MLX90614_ID3 = const(0x3E)
 _MLX90614_ID4 = const(0x3F)
 
+
 class MLX90614:
     """Create an instance of the MLX90614 temperature sensor.  You must pass in
     the following parameters:
