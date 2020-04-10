@@ -41,7 +41,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Adafruit mlx90614 Library"
+project = "Adafruit MLX90614 Library"
 copyright = "2018 Mikey Sklar"
 author = "Mikey Sklar"
 
@@ -117,7 +117,7 @@ html_static_path = ["_static"]
 html_favicon = "_static/favicon.ico"
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "AdafruitMlx90614Librarydoc"
+htmlhelp_basename = "AdafruitMLX90614Librarydoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -142,8 +142,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "Adafruitmlx90614Library.tex",
-        "Adafruitmlx90614 Library Documentation",
+        "AdafruitMLX90614Library.tex",
+        "Adafruit MLX90614 Library Documentation",
         author,
         "manual",
     ),
@@ -156,8 +156,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "Adafruitmlx90614library",
-        "Adafruit mlx90614 Library Documentation",
+        "AdafruitMLX90614library",
+        "Adafruit MLX90614 Library Documentation",
         [author],
         1,
     )
@@ -171,10 +171,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "Adafruitmlx90614Library",
-        "Adafruit mlx90614 Library Documentation",
+        "AdafruitMLX90614Library",
+        "Adafruit MLX90614 Library Documentation",
         author,
-        "Adafruitmlx90614Library",
+        "AdafruitMLX90614Library",
         "One line description of project.",
         "Miscellaneous",
     ),
