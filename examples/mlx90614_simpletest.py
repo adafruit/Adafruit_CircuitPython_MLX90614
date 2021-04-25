@@ -15,8 +15,8 @@
 import board
 import adafruit_mlx90614
 
-# the mlx90614 must be run at 100k [normal speed]
-# the mlx90614 will not appear at the 400k speed
+# The MLX90614 only works at the default I2C bus speed of 100kHz.
+# A higher speed, such as 400kHz, will not work.
 i2c = board.I2C()
 mlx = adafruit_mlx90614.MLX90614(i2c)
 

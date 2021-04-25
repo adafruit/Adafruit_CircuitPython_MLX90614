@@ -75,8 +75,8 @@ class MLX90614:
     """Create an instance of the MLX90614 temperature sensor.
 
     :param ~busio.I2C i2c_bus: The I2C bus the MLX90614 is connected to.
-                               frequency=100000 - this sensor does not
-                               respond to a  400000 i2c bus speed
+                               Do not use an I2C bus speed of 400kHz. The sensor only works
+                               at the default bus speed of 100kHz.
     :param int address: I2C device address. Defaults to :const:`0x5A`.
 
     **Quickstart: Importing and using the MLX90614**
