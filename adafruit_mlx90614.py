@@ -34,7 +34,7 @@ Implementation Notes
 **Software and Dependencies:**
 
 * Adafruit CircuitPython firmware for the supported boards:
-  https://github.com/adafruit/circuitpython/releases
+  https://circuitpython.org/downloads
 """
 
 from micropython import const
@@ -72,14 +72,37 @@ _MLX90614_ID4 = const(0x3F)
 
 
 class MLX90614:
-    """Create an instance of the MLX90614 temperature sensor.  You must pass in
-    the following parameters:
-    - i2c: An instance of the I2C bus connected to the sensor.
-    - frequency=100000 - this sensor does not respond to the default 400000 i2c bus speed
+    """Create an instance of the MLX90614 temperature sensor.
 
-    Optionally you can specify:
-    - address: The I2C address of the sensor.
-    If not specified the sensor's default value will be assumed."""
+    :param ~busio.I2C i2c_bus: The I2C bus the MLX90614 is connected to.
+                               Do not use an I2C bus speed of 400kHz. The sensor only works
+                               at the default bus speed of 100kHz.
+    :param int address: I2C device address. Defaults to :const:`0x5A`.
+
+    **Quickstart: Importing and using the MLX90614**
+
+        Here is an example of using the :class:`MLX90614` class.
+        First you will need to import the libraries to use the sensor
+
+        .. code-block:: python
+
+            import board
+            import adafruit_mlx90614
+
+        Once this is done you can define your `board.I2C` object and define your sensor object
+
+        .. code-block:: python
+
+            i2c = board.I2C()
+            mlx = adafruit_mlx90614.MLX90614(i2c)
+
+        Now you have access to the :attr:`ambient_temperature` attribute
+
+        .. code-block:: python
+
+            temperature = mlx.ambient_temperature
+
+    """
 
     def __init__(self, i2c_bus, address=_MLX90614_I2CADDR):
         self._device = i2c_device.I2CDevice(i2c_bus, address)
@@ -88,12 +111,12 @@ class MLX90614:
 
     @property
     def ambient_temperature(self):
-        """Ambient Temperature in celsius."""
+        """Ambient Temperature in Celsius."""
         return self._read_temp(_MLX90614_TA)
 
     @property
     def object_temperature(self):
-        """Object Temperature in celsius."""
+        """Object Temperature in Celsius."""
         return self._read_temp(_MLX90614_TOBJ1)
 
     def _read_temp(self, register):

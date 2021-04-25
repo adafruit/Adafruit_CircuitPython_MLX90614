@@ -23,7 +23,7 @@ Table of Contents
 .. toctree::
     :caption: Tutorials
 
-    https://github.com/adafruit/Adafruit_Learning_System_Guides/tree/master/DIY_Thermal_Light_Painting
+    Using Melexis MLX90614 Non-Contact Sensors Learning Guide <https://learn.adafruit.com/using-melexis-mlx90614-non-contact-sensors>
 
 .. toctree::
     :caption: Related Products
