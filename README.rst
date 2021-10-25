@@ -57,6 +57,11 @@ Usage Example
 
 See examples/mlx90614_simpletest.py for a demo of the usage.
 
+Documentation
+=============
+
+API documentation for this library can be found on `Read the Docs <https://circuitpython.readthedocs.io/projects/mlx90614/en/latest/>`_.
+
 Contributing
 ============
 
