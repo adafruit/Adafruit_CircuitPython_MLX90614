@@ -39,7 +39,7 @@ Implementation Notes
 
 from micropython import const
 
-import adafruit_bus_device.i2c_device as i2c_device
+from adafruit_bus_device import i2c_device
 
 
 # imports
