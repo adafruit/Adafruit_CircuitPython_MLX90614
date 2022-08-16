@@ -44,7 +44,7 @@ from adafruit_bus_device import i2c_device
 
 # imports
 
-__version__ = "0.0.0-auto.0"
+__version__ = "0.0.0+auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_mlx90614.git"
 
 # Internal constants:

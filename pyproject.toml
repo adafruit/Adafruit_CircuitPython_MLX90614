@@ -12,7 +12,7 @@ requires = [
 [project]
 name = "adafruit-circuitpython-mlx90614"
 description = "CircuitPython module for the Melexis MLX90614 Contact-less InfraredTemperature sensor."
-version = "0.0.0-auto.0"
+version = "0.0.0+auto.0"
 readme = "README.rst"
 authors = [
     {name = "Adafruit Industries", email = "circuitpython@adafruit.com"}
