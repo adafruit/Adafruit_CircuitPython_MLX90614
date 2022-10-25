@@ -41,6 +41,11 @@ from micropython import const
 
 from adafruit_bus_device import i2c_device
 
+try:
+    import typing  # pylint: disable=unused-import
+    from busio import I2C
+except ImportError:
+    pass
 
 # imports
 
@@ -104,28 +109,28 @@ class MLX90614:
 
     """
 
-    def __init__(self, i2c_bus, address=_MLX90614_I2CADDR):
+    def __init__(self, i2c_bus: I2C, address: int = _MLX90614_I2CADDR) -> None:
         self._device = i2c_device.I2CDevice(i2c_bus, address)
         self.buf = bytearray(2)
         self.buf[0] = _MLX90614_CONFIG
 
     @property
-    def ambient_temperature(self):
+    def ambient_temperature(self) -> float:
         """Ambient Temperature in Celsius."""
         return self._read_temp(_MLX90614_TA)
 
     @property
-    def object_temperature(self):
+    def object_temperature(self) -> float:
         """Object Temperature in Celsius."""
         return self._read_temp(_MLX90614_TOBJ1)
 
-    def _read_temp(self, register):
+    def _read_temp(self, register: int) -> float:
         temp = self._read_16(register)
         temp *= 0.02
         temp -= 273.15
         return temp
 
-    def _read_16(self, register):
+    def _read_16(self, register: int) -> int:
         # Read and return a 16-bit unsigned big endian value read from the
         # specified 16-bit register address.
         with self._device as i2c:
