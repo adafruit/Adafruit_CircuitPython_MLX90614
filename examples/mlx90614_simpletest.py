@@ -17,7 +17,8 @@ import adafruit_mlx90614
 
 # The MLX90614 only works at the default I2C bus speed of 100kHz.
 # A higher speed, such as 400kHz, will not work.
-i2c = board.I2C()
+i2c = board.I2C()  # uses board.SCL and board.SDA
+# i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
 mlx = adafruit_mlx90614.MLX90614(i2c)
 
 # temperature results in celsius
