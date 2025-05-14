@@ -13,6 +13,7 @@
 #  products from Adafruit!
 
 import board
+
 import adafruit_mlx90614
 
 # The MLX90614 only works at the default I2C bus speed of 100kHz.

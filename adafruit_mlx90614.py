@@ -37,12 +37,10 @@ Implementation Notes
   https://circuitpython.org/downloads
 """
 
+from adafruit_bus_device import i2c_device
 from micropython import const
 
-from adafruit_bus_device import i2c_device
-
 try:
-    import typing  # pylint: disable=unused-import
     from busio import I2C
 except ImportError:
     pass
